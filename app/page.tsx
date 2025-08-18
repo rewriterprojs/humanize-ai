@@ -402,8 +402,10 @@ export default function HomePage() {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <FileText className="h-8 w-8 text-primary mx-auto mb-4" />
-                <CardTitle>How-to Guides</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                  <FileText className="h-8 w-8 text-primary" />
+                  How-to Guides
+                </CardTitle>
                 <CardDescription>Step-by-step tutorials for humanizing AI content</CardDescription>
                 <Link href="/content-humanization-guide">
                   <Button variant="outline" className="mt-4 bg-transparent">
@@ -416,8 +418,10 @@ export default function HomePage() {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Users className="h-8 w-8 text-primary mx-auto mb-4" />
-                <CardTitle>Use Cases</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-8 w-8 text-primary" />
+                  Use Cases
+                </CardTitle>
                 <CardDescription>Specific guides for students, marketers, and businesses</CardDescription>
                 <Link href="/ai-humanization-for-students">
                   <Button variant="outline" className="mt-4 bg-transparent">
@@ -514,6 +518,16 @@ export default function HomePage() {
                 <li>
                   <Link href="#contact" className="hover:text-primary transition-colors">
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://github.com/rewriterprojs/humanize-ai"
+                    className="hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Project
                   </Link>
                 </li>
                 <li>
