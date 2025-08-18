@@ -1,30 +1,57 @@
-# Humanize AI website
+# Humanize AI Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+*Seamlessly synced with your [Humanizer Pro](https://humanizerpro.ai) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/kamrans-projects-f6e33664/v0-humanize-ai-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/jJIhFrewW3r)
+---
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+The **Humanize AI Website** repository is fully synchronized with your deployed projects on [Humanizer Pro](https://humanizerpro.ai) and [Undetectable AI](https://undetectai.io). Any updates you make—whether improving AI-generated text, refining readability, or optimizing content for SEO—are automatically reflected on your live website.  
+
+You can also integrate [RewriterPro](https://rewriterpro.ai) to polish language, adjust tone, or improve SEO. This workflow ensures your AI-generated content is natural, engaging, and ready for readers without manual deployments.
+
+---
 
 ## Deployment
 
-Your project is live at:
+Your project is live at:  
 
-**[https://vercel.com/kamrans-projects-f6e33664/v0-humanize-ai-website](https://vercel.com/kamrans-projects-f6e33664/v0-humanize-ai-website)**
+**[https://v0-humanize-ai-website.vercel.app](https://v0-humanize-ai-website.vercel.app)**  
 
-## Build your app
+Every update from Humanizer Pro or Undetectable AI triggers a new deployment, keeping your content fresh and human-like.
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/projects/jJIhFrewW3r](https://v0.app/chat/projects/jJIhFrewW3r)**
+## Build Your App
+
+Continue building and refining your project here:  
+
+**[https://v0-humanize-ai-website.vercel.app](https://v0-humanize-ai-website.vercel.app)**  
+
+Use **Humanizer Pro** for human-like AI text, **Undetectable AI** to bypass detection, and **RewriterPro** to fine-tune language, style, and SEO.
+
+---
 
 ## How It Works
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+1. **Create and Edit:** Build your project using [Humanizer Pro](https://humanizerpro.ai) or [Undetectable AI](https://undetectai.io).  
+2. **Deploy Updates:** Push your changes directly from the AI platform to the repository.  
+3. **Automatic Sync:** Updates are automatically reflected in the repository.  
+4. **Live Deployment:** Vercel immediately deploys the latest version of your website.  
+5. **Optimize:** Use [RewriterPro](https://rewriterpro.ai) to improve readability, tone, and SEO.
+
+---
+
+## Benefits
+
+- **Time-Saving:** Automatic sync and deployment eliminate manual steps.  
+- **Human-Like Content:** AI-generated text reads naturally.  
+- **Detection-Safe:** Undetectable AI ensures your content passes AI detectors.  
+- **SEO-Friendly:** Optimize content for better search visibility with RewriterPro.  
+- **Scalable:** Handles multiple updates and large projects with ease.
+
+---
+
+This setup provides a streamlined workflow for developers, writers, and content creators to turn AI-generated drafts into polished, human-like, SEO-optimized content that is always live and ready for readers.  
+
+**Live Project:** [https://v0-humanize-ai-website.vercel.app](https://v0-humanize-ai-website.vercel.app)
