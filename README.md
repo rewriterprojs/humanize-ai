@@ -39,7 +39,7 @@ Use **Humanizer Pro** for human-like AI text, **Undetectable AI** to bypass dete
 3. **Automatic Sync:** Updates are automatically reflected in the repository.  
 4. **Live Deployment:** Vercel immediately deploys the latest version of your website.  
 5. **Optimize:** Use [RewriterPro](https://rewriterpro.ai) to improve readability, tone, and SEO.
-6.  **Learn More:** Use [Substack blog post]([https://rewriterpro.ai](https://open.substack.com/pub/humanizerpro/p/we-tested-10-ai-humanizersthese-3?r=69r6h8&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true) to see the list of humanizer apps.
+6.  **Learn More:** Use [Substack blog post]([Tested Humanizers](https://open.substack.com/pub/humanizerpro/p/we-tested-10-ai-humanizersthese-3?r=69r6h8&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true) to see the list of humanizer apps.
 
 ---
 
