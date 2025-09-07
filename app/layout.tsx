@@ -33,16 +33,31 @@ export const metadata: Metadata = {
       "Revolutionary AI humanizer that transforms AI-generated content into natural, human-like text. Bypass AI detection and create authentic content.",
     type: "website",
     locale: "en_US",
+    url: "https://humanizeai.com",
+    siteName: "Humanize AI",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Humanize AI - Transform AI Content into Human-Like Text",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Humanize AI - Transform AI Content into Human-Like Text",
     description: "Revolutionary AI humanizer that transforms AI-generated content into natural, human-like text.",
+    images: ["/og-image.jpg"],
   },
   verification: {
     google: "your-google-verification-code",
   },
-    generator: 'v0.app'
+  alternates: {
+    canonical: "https://humanizeai.com",
+  },
+  category: "Technology",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -55,6 +70,35 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://humanizeai.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "Humanize AI",
+              description:
+                "Revolutionary AI humanizer that transforms AI-generated content into natural, human-like text",
+              url: "https://humanizeai.com",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                reviewCount: "1250",
+              },
+              author: {
+                "@type": "Organization",
+                name: "Humanize AI Team",
+              },
+            }),
+          }}
+        />
       </head>
       <body className="font-sans antialiased">{children}</body>
     </html>

@@ -8,19 +8,53 @@ import { SiteNavigation } from "@/components/site-navigation"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Humanize AI - Transform AI Content into Human-Like Text",
+            description:
+              "Revolutionary AI humanizer that transforms AI-generated content into natural, human-like text",
+            url: "https://humanizeai.com",
+            mainEntity: {
+              "@type": "SoftwareApplication",
+              name: "Humanize AI",
+              applicationCategory: "BusinessApplication",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://humanizeai.com",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+
       {/* Header Navigation */}
       <SiteNavigation />
 
-      {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" itemScope itemType="https://schema.org/Product">
         <div className="container mx-auto max-w-6xl text-center">
           <Badge variant="secondary" className="mb-4">
             🚀 Revolutionary AI Humanization Technology
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight" itemProp="name">
             Transform AI Content into <span className="text-primary">Human-Like Text</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" itemProp="description">
             Our advanced AI humanizer converts artificial intelligence-generated content into natural, authentic text
             that bypasses AI detection while maintaining quality and meaning. Perfect for content creators, marketers,
             and businesses.
