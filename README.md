@@ -27,7 +27,7 @@ Every update from Humanizer Pro or Undetectable AI triggers a new deployment, ke
 Continue building and refining your project here:  
 
 **[https://v0-humanize-ai-website.vercel.app](https://v0-humanize-ai-website.vercel.app)**  
-**[[https://v0-humanize-ai-website.vercel.app](https://superhumanizer.ai)](https://superhumanizer.ai)**  
+**(https://superhumanizer.ai)](https://superhumanizer.ai)**  
 
 Use **Humanizer Pro** for human-like AI text, **Undetectable AI** to bypass detection, and **RewriterPro** to fine-tune language, style, and SEO.
 
