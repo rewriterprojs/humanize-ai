@@ -1,7 +1,19 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, FileText, Globe, Star, TrendingUp } from "lucide-react"
+import {
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Shield,
+  Brain,
+  FileText,
+  Globe,
+  Star,
+  TrendingUp,
+  BookOpen,
+  Lightbulb,
+} from "lucide-react"
 import Link from "next/link"
 import { SiteNavigation } from "@/components/site-navigation"
 
@@ -13,20 +25,15 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Humanize AI - Transform AI Content into Human-Like Text",
+            "@type": "WebSite",
+            name: "Humanize AI - Learn AI Content Humanization Techniques",
             description:
-              "Revolutionary AI humanizer that transforms AI-generated content into natural, human-like text",
+              "Comprehensive guide and techniques for transforming AI-generated content into natural, human-like text. Learn best practices, methods, and strategies for AI content humanization.",
             url: "https://humanizeai.com",
-            mainEntity: {
-              "@type": "SoftwareApplication",
-              name: "Humanize AI",
-              applicationCategory: "BusinessApplication",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
+            about: {
+              "@type": "Thing",
+              name: "AI Content Humanization",
+              description: "Techniques and methods for converting AI-generated text into human-like writing",
             },
             breadcrumb: {
               "@type": "BreadcrumbList",
@@ -46,107 +53,119 @@ export default function HomePage() {
       {/* Header Navigation */}
       <SiteNavigation />
 
-      <section className="py-20 px-4" itemScope itemType="https://schema.org/Product">
+      {/* Hero Section */}
+      <section className="py-20 px-4" itemScope itemType="https://schema.org/Article">
         <div className="container mx-auto max-w-6xl text-center">
           <Badge variant="secondary" className="mb-4">
-            🚀 Revolutionary AI Humanization Technology
+            Learn AI Humanization Techniques
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight" itemProp="name">
-            Transform AI Content into <span className="text-primary">Human-Like Text</span>
+          <h1
+            className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight text-balance"
+            itemProp="headline"
+          >
+            Master the Art of <span className="text-primary">AI Content Humanization</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" itemProp="description">
-            Our advanced AI humanizer converts artificial intelligence-generated content into natural, authentic text
-            that bypasses AI detection while maintaining quality and meaning. Perfect for content creators, marketers,
-            and businesses.
+          <p
+            className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-pretty"
+            itemProp="description"
+          >
+            Discover comprehensive techniques, strategies, and best practices for transforming AI-generated content into
+            natural, authentic human-like text. Learn from expert guides, tutorials, and real-world examples.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-              Start Humanizing Now
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+              <Link href="#guides">
+                Explore Guides
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">
-              Watch Demo
+            <Button asChild variant="outline" size="lg" className="px-8 py-3 bg-transparent">
+              <Link href="/what-is-ai-humanization">Learn More</Link>
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
-              <div className="text-muted-foreground">AI Detection Bypass Rate</div>
+              <div className="text-3xl font-bold text-primary mb-2">12+</div>
+              <div className="text-muted-foreground">Comprehensive Guides</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50K+</div>
-              <div className="text-muted-foreground">Content Creators Trust Us</div>
+              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-muted-foreground">Humanization Techniques</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">2M+</div>
-              <div className="text-muted-foreground">Documents Humanized</div>
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-muted-foreground">Free Educational Content</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-muted/30">
+      <section id="benefits" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Our AI Humanizer?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Learn AI Humanization?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced features designed to make your AI-generated content indistinguishable from human writing
+              Essential knowledge for content creators, writers, marketers, and anyone working with AI-generated content
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Shield className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>AI Detection Bypass</CardTitle>
+                <CardTitle>Bypass AI Detection</CardTitle>
                 <CardDescription>
-                  Advanced algorithms that make your content undetectable by AI detection tools like GPTZero,
-                  Originality.ai, and Turnitin
+                  Learn proven techniques to make your content undetectable by AI detection tools like GPTZero,
+                  Originality.ai, and Turnitin while maintaining authenticity
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Zap className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Lightning Fast Processing</CardTitle>
+                <Brain className="h-12 w-12 text-primary mb-4" />
+                <CardTitle>Enhance Writing Quality</CardTitle>
                 <CardDescription>
-                  Process thousands of words in seconds with our optimized AI humanization engine
+                  Discover methods to improve readability, flow, and engagement while preserving the core message and
+                  intent of your content
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
                 <FileText className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Content Quality Preservation</CardTitle>
+                <CardTitle>Preserve Content Meaning</CardTitle>
                 <CardDescription>
-                  Maintain the original meaning, context, and quality while making text sound naturally human
+                  Master techniques to maintain original context, accuracy, and semantic value while transforming AI
+                  text into human-like writing
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Globe className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Multi-Language Support</CardTitle>
+                <CardTitle>Multilingual Techniques</CardTitle>
                 <CardDescription>
-                  Humanize content in over 50 languages with native-level fluency and cultural context
+                  Understand humanization strategies across different languages and cultural contexts for global content
+                  creation
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Users className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Bulk Processing</CardTitle>
+                <CardTitle>Scale Your Content</CardTitle>
                 <CardDescription>
-                  Handle large volumes of content with our batch processing feature for enterprise needs
+                  Learn efficient workflows and processes for humanizing large volumes of AI-generated content
+                  effectively
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Star className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>SEO Optimization</CardTitle>
+                <CardTitle>SEO Best Practices</CardTitle>
                 <CardDescription>
-                  Maintain SEO value while humanizing content, preserving keywords and search engine rankings
+                  Optimize humanized content for search engines while maintaining natural readability and user
+                  engagement
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -154,13 +173,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 px-4">
+      <section id="process" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How Our AI Humanization Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">The AI Humanization Process</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our proprietary technology uses advanced natural language processing to transform AI text
+              Understanding the fundamental steps to transform AI-generated text into natural human writing
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,40 +186,42 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Input AI Content</h3>
+              <h3 className="text-xl font-semibold mb-4">Analyze AI Patterns</h3>
               <p className="text-muted-foreground">
-                Paste your AI-generated text from ChatGPT, Claude, Gemini, or any other AI writing tool
+                Identify telltale signs of AI generation including repetitive structures, predictable phrasing, and
+                unnatural patterns that signal machine-written content
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">AI Analysis & Processing</h3>
+              <h3 className="text-xl font-semibold mb-4">Apply Humanization Techniques</h3>
               <p className="text-muted-foreground">
-                Our advanced algorithms analyze patterns, tone, and structure to identify AI-generated markers
+                Use proven methods like varying sentence structure, adding personal touches, incorporating natural
+                transitions, and adjusting tone to match human writing
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Human-Like Output</h3>
+              <h3 className="text-xl font-semibold mb-4">Validate & Refine</h3>
               <p className="text-muted-foreground">
-                Receive naturally flowing, human-sounding content that passes all AI detection tests
+                Test your humanized content with detection tools, review for authenticity, and refine until it passes as
+                naturally human-written text
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
       <section id="use-cases" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Perfect for Every Content Need</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">AI Humanization Applications</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From academic writing to marketing content, our AI humanizer serves diverse industries
+              Learn how to apply humanization techniques across different content types and industries
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -212,17 +232,26 @@ export default function HomePage() {
                   Academic & Research Writing
                 </CardTitle>
                 <CardDescription>
-                  Transform AI-assisted research papers, essays, and academic content to meet institutional standards.
-                  Learn more about{" "}
+                  Techniques for humanizing AI-assisted research papers, essays, and academic content to meet
+                  institutional standards. Understand{" "}
                   <Link
                     href="https://en.wikipedia.org/wiki/Academic_writing"
                     className="text-primary hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    academic writing standards
+                    academic writing principles
                   </Link>{" "}
-                  and how AI detection affects scholarly work.
+                  and learn how to maintain scholarly integrity. Explore tools like{" "}
+                  <Link
+                    href="https://superhumanizer.ai"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SuperHumanizer.ai
+                  </Link>{" "}
+                  for advanced humanization capabilities.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -233,8 +262,8 @@ export default function HomePage() {
                   Content Marketing & SEO
                 </CardTitle>
                 <CardDescription>
-                  Create authentic blog posts, articles, and marketing copy that ranks well in search engines while
-                  maintaining human appeal. Enhance your content with tools like{" "}
+                  Methods for creating authentic blog posts, articles, and marketing copy that ranks well and resonates
+                  with readers. Enhance your workflow with platforms like{" "}
                   <Link
                     href="https://humanizerpro.ai"
                     className="text-primary hover:underline"
@@ -243,7 +272,7 @@ export default function HomePage() {
                   >
                     HumanizerPro.ai
                   </Link>{" "}
-                  for advanced humanization.
+                  for professional content transformation.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -254,8 +283,8 @@ export default function HomePage() {
                   Business Communications
                 </CardTitle>
                 <CardDescription>
-                  Humanize AI-generated emails, reports, and business documents to maintain professional credibility and
-                  authentic communication.
+                  Strategies for humanizing AI-generated emails, reports, proposals, and business documents to maintain
+                  professional credibility and authentic voice in corporate communications
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -266,8 +295,8 @@ export default function HomePage() {
                   Creative Writing & Storytelling
                 </CardTitle>
                 <CardDescription>
-                  Transform AI-generated stories, scripts, and creative content into naturally flowing narratives.
-                  Complement with{" "}
+                  Approaches for transforming AI-generated stories, scripts, and creative content into engaging
+                  narratives. Combine techniques with{" "}
                   <Link
                     href="https://rewriterpro.ai"
                     className="text-primary hover:underline"
@@ -284,26 +313,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Technology Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Advanced AI Humanization Technology</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Understanding AI Humanization Science
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Built on cutting-edge research in natural language processing and machine learning
+              Learn the linguistic and technical foundations behind effective AI content humanization
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">The Science Behind Humanization</h3>
+              <h3 className="text-2xl font-semibold mb-6">Core Humanization Principles</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-1">Neural Language Models</h4>
+                    <h4 className="font-semibold mb-1">Natural Language Patterns</h4>
                     <p className="text-muted-foreground">
-                      Advanced transformer architectures trained on human writing patterns to understand natural
-                      language flow
+                      Understanding how humans naturally write and speak, including rhythm, varied sentence structures,
+                      and conversational flow
                     </p>
                   </div>
                 </div>
@@ -312,22 +342,24 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-semibold mb-1">Semantic Preservation</h4>
                     <p className="text-muted-foreground">
-                      Maintains original meaning while restructuring sentences for natural human expression
+                      Techniques to maintain original meaning and intent while restructuring content for more natural
+                      expression
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-1">Pattern Recognition</h4>
+                    <h4 className="font-semibold mb-1">AI Pattern Recognition</h4>
                     <p className="text-muted-foreground">
-                      Identifies and eliminates telltale signs of AI generation while preserving content quality
+                      Identifying common AI writing markers like overuse of certain phrases, perfect grammar, and lack
+                      of personal voice
                     </p>
                   </div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
-                Learn more about{" "}
+                Explore foundational concepts in{" "}
                 <Link
                   href="https://en.wikipedia.org/wiki/Natural_language_processing"
                   className="text-primary hover:underline"
@@ -345,35 +377,47 @@ export default function HomePage() {
                 >
                   artificial intelligence
                 </Link>{" "}
-                technologies that power our humanization engine.
+                to better understand content humanization technologies.
               </p>
             </div>
             <div className="bg-card rounded-lg p-8 border border-border">
-              <h4 className="text-lg font-semibold mb-4">Humanization Process</h4>
+              <h4 className="text-lg font-semibold mb-4">Key Humanization Techniques</h4>
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">1</span>
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm font-semibold block mb-1">Vary Sentence Structure</span>
+                    <span className="text-xs text-muted-foreground">
+                      Mix short and long sentences for natural rhythm
+                    </span>
                   </div>
-                  <span className="text-sm">Content Analysis & Pattern Detection</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">2</span>
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm font-semibold block mb-1">Add Personal Voice</span>
+                    <span className="text-xs text-muted-foreground">
+                      Incorporate opinions, experiences, and unique perspectives
+                    </span>
                   </div>
-                  <span className="text-sm">Semantic Structure Mapping</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">3</span>
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm font-semibold block mb-1">Use Natural Transitions</span>
+                    <span className="text-xs text-muted-foreground">
+                      Replace formulaic connectors with conversational bridges
+                    </span>
                   </div>
-                  <span className="text-sm">Human-Style Reconstruction</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-primary">4</span>
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm font-semibold block mb-1">Embrace Imperfection</span>
+                    <span className="text-xs text-muted-foreground">
+                      Occasional contractions and casual language feel more human
+                    </span>
                   </div>
-                  <span className="text-sm">Quality Assurance & Validation</span>
                 </div>
               </div>
             </div>
@@ -381,183 +425,214 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 bg-primary/5">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Humanize Your AI Content?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Start Learning AI Humanization Today</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of content creators, marketers, and businesses who trust our AI humanization technology
+            Access our comprehensive library of guides, tutorials, and expert resources completely free
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+              <Link href="/content-humanization-guide">
+                Read Complete Guide
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">
-              View Pricing
+            <Button asChild variant="outline" size="lg" className="px-8 py-3 bg-transparent">
+              <Link href="/blog">Browse Articles</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Comprehensive Internal Linking Section */}
-      <section className="py-16 px-4">
+      <section id="guides" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Explore Our Complete Guide Library</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Comprehensive Learning Resources</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow border-border">
               <CardHeader>
-                <Brain className="h-8 w-8 text-primary mx-auto mb-4" />
-                <CardTitle>Learn the Basics</CardTitle>
-                <CardDescription>Understand AI humanization fundamentals and technology</CardDescription>
-                <Link href="/what-is-ai-humanization">
-                  <Button variant="outline" className="mt-4 bg-transparent">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardHeader>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Shield className="h-8 w-8 text-primary mx-auto mb-4" />
-                <CardTitle>Detection Tools</CardTitle>
-                <CardDescription>Learn about AI detection tools and bypass strategies</CardDescription>
-                <Link href="/ai-detection-tools">
-                  <Button variant="outline" className="mt-4 bg-transparent">
-                    Explore Tools
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardHeader>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="h-8 w-8 text-primary" />
-                  How-to Guides
+                <Brain className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/what-is-ai-humanization" className="hover:text-primary transition-colors">
+                    What is AI Humanization?
+                  </Link>
                 </CardTitle>
-                <CardDescription>Step-by-step tutorials for humanizing AI content</CardDescription>
-                <Link href="/content-humanization-guide">
-                  <Button variant="outline" className="mt-4 bg-transparent">
-                    Learn How
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <CardDescription>
+                  Complete introduction to AI humanization concepts, techniques, and applications for transforming
+                  machine-generated text
+                </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-border">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Users className="h-8 w-8 text-primary" />
-                  Use Cases
+                <Shield className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/ai-detection-tools" className="hover:text-primary transition-colors">
+                    AI Detection Tools Guide
+                  </Link>
                 </CardTitle>
-                <CardDescription>Specific guides for students, marketers, and businesses</CardDescription>
-                <Link href="/ai-humanization-for-students">
-                  <Button variant="outline" className="mt-4 bg-transparent">
-                    Find Your Guide
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <CardDescription>
+                  Learn about popular AI detection software and how to create content that maintains authenticity while
+                  bypassing detection
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-border">
+              <CardHeader>
+                <BookOpen className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/content-humanization-guide" className="hover:text-primary transition-colors">
+                    Complete Humanization Guide
+                  </Link>
+                </CardTitle>
+                <CardDescription>
+                  Step-by-step tutorial covering advanced techniques, best practices, and expert strategies for
+                  effective humanization
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-border">
+              <CardHeader>
+                <FileText className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/ai-writing-tools" className="hover:text-primary transition-colors">
+                    AI Writing Tools Overview
+                  </Link>
+                </CardTitle>
+                <CardDescription>
+                  Comprehensive analysis of AI writing platforms, their capabilities, and how to optimize their output
+                  through humanization
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-border">
+              <CardHeader>
+                <Users className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/ai-humanization-for-students" className="hover:text-primary transition-colors">
+                    Student's Guide
+                  </Link>
+                </CardTitle>
+                <CardDescription>
+                  Specialized techniques for academic writing, maintaining integrity, and meeting educational standards
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-border">
+              <CardHeader>
+                <Star className="h-8 w-8 text-primary mb-3" />
+                <CardTitle className="text-lg">
+                  <Link href="/best-ai-humanizers" className="hover:text-primary transition-colors">
+                    Best AI Humanizer Tools
+                  </Link>
+                </CardTitle>
+                <CardDescription>
+                  Detailed comparison and evaluation of leading AI humanization platforms and their unique features
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/resources">
-              <Button size="lg" variant="outline" className="bg-transparent">
+          <div className="mt-12 text-center">
+            <Button asChild variant="outline" size="lg">
+              <Link href="/resources">
                 View All Resources
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-4 bg-muted/50 border-t border-border">
+      <footer className="bg-muted/50 border-t border-border py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Brain className="h-8 w-8 text-primary" />
-                <span className="text-xl font-bold text-foreground">Humanize AI</span>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Transform AI-generated content into natural, human-like text with our advanced humanization technology.
+              <h3 className="font-bold text-foreground mb-4">About</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Humanize AI provides comprehensive educational resources on AI content humanization techniques and best
+                practices.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Product</h4>
-              <ul className="space-y-2 text-muted-foreground">
+              <h3 className="font-bold text-foreground mb-4">Learning Resources</h3>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#features" className="hover:text-primary transition-colors">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#how-it-works" className="hover:text-primary transition-colors">
-                    How It Works
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#pricing" className="hover:text-primary transition-colors">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#api" className="hover:text-primary transition-colors">
-                    API
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Resources</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <Link href="#blog" className="hover:text-primary transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#guides" className="hover:text-primary transition-colors">
-                    Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#case-studies" className="hover:text-primary transition-colors">
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#help" className="hover:text-primary transition-colors">
-                    Help Center
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Company</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <Link href="#about" className="hover:text-primary transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="hover:text-primary transition-colors">
-                    Contact
+                  <Link
+                    href="/what-is-ai-humanization"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    AI Humanization Basics
                   </Link>
                 </li>
                 <li>
                   <Link
+                    href="/content-humanization-guide"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Complete Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                    Blog & Articles
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors">
+                    All Resources
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Topics</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link
+                    href="/ai-detection-tools"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    AI Detection Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai-writing-tools" className="text-muted-foreground hover:text-primary transition-colors">
+                    AI Writing Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/best-ai-humanizers"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    AI Humanizer Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/ai-humanization-for-students"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    For Students
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-foreground mb-4">Community</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link
                     href="https://github.com/rewriterprojs/humanize-ai"
-                    className="hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -565,20 +640,43 @@ export default function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#privacy" className="hover:text-primary transition-colors">
-                    Privacy Policy
+                  <Link
+                    href="https://humanizerpro.ai"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    HumanizerPro.ai
                   </Link>
                 </li>
                 <li>
-                  <Link href="#terms" className="hover:text-primary transition-colors">
-                    Terms of Service
+                  <Link
+                    href="https://rewriterpro.ai"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    RewriterPro.ai
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://superhumanizer.ai"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SuperHumanizer.ai
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 Humanize AI. All rights reserved. Transforming AI content into human-like text.</p>
+          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+            <p>
+              &copy; {new Date().getFullYear()} Humanize AI. All rights reserved. Educational resource for AI content
+              humanization techniques.
+            </p>
           </div>
         </div>
       </footer>
